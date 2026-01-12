@@ -1,0 +1,56 @@
+﻿@model DoAnQuanLyKhachSan.Models.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Xóa người dùng";
+}
+
+<!-- Gắn file CSS -->
+@section Styles {
+    <link rel="stylesheet" href="~/MyCss/All_Delete.css" />
+}
+
+<div class="delete-container">
+    <div class="delete-card">
+        <div class="delete-header">
+            <h3>Xóa người dùng</h3>
+            <p class="delete-confirm">Bạn có chắc chắn muốn xóa người dùng này không?</p>
+        </div>
+
+        <div class="delete-details">
+            <div class="detail-row">
+                <div class="detail-label">Tên đăng nhập</div>
+                <div class="detail-value">@Html.DisplayFor(model => model.Username)</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Mật khẩu (hash)</div>
+                <div class="detail-value">@Html.DisplayFor(model => model.PasswordHash)</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Họ tên</div>
+                <div class="detail-value">@Html.DisplayFor(model => model.FullName)</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Email</div>
+                <div class="detail-value">@Html.DisplayFor(model => model.Email)</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Quyền</div>
+                <div class="detail-value">@Html.DisplayFor(model => model.Role.RoleName)</div>
+            </div>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="delete-actions">
+                <button type="submit" class="btn-delete">
+                    <i class="fas fa-trash-alt"></i> Xóa
+                </button>
+                <a href="@Url.Action("Index")" class="btn-cancel">
+                    <i class="fas fa-arrow-left"></i> Hủy
+                </a>
+            </div>
+        }
+    </div>
+</div>

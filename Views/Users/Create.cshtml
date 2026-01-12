@@ -1,0 +1,64 @@
+﻿@model DoAnQuanLyKhachSan.Models.User
+@{
+    ViewBag.Title = "Tạo tài khoản mới";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/MyCss/CSS_All_Create.css" rel="stylesheet" />
+
+<div class="user-create-container">
+    <div class="form-card">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <div class="form-header">
+                    <h4>@ViewBag.Title</h4>
+                </div>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Username, "Tài khoản", htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập tên đăng nhập" } })
+                    @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PasswordHash, "Mật khẩu", htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.PasswordHash, new { htmlAttributes = new { @class = "form-control", type = "password", placeholder = "Nhập mật khẩu" } })
+                    @Html.ValidationMessageFor(model => model.PasswordHash, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FullName, "Họ và tên", htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập họ và tên" } })
+                    @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, "Email", htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập địa chỉ email" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RoleId, "Vai trò", htmlAttributes: new { @class = "control-label" })
+                    @Html.DropDownList("RoleId", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.RoleId, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-save"></i> Tạo tài khoản
+                    </button>
+                </div>
+            </div>
+        }
+
+        <a href="@Url.Action("Index")" class="btn-back">
+            <i class="fas fa-arrow-left"></i> Quay lại danh sách
+        </a>
+    </div>
+</div>

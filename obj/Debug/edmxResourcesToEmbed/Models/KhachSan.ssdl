@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KhachSanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bookings">
+    <Key>
+      <PropertyRef Name="BookingId" />
+    </Key>
+    <Property Name="BookingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="RoomId" Type="int" />
+    <Property Name="CheckInDate" Type="datetime" />
+    <Property Name="CheckOutDate" Type="datetime" />
+    <Property Name="NumberOfPeople" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="255" />
+    <Property Name="PaymentStatusID" Type="int" />
+    <Property Name="BookingStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="BookingServices">
+    <Key>
+      <PropertyRef Name="BookingServiceId" />
+    </Key>
+    <Property Name="BookingServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookingId" Type="int" />
+    <Property Name="ServiceId" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="BookingStatus">
+    <Key>
+      <PropertyRef Name="BookingStatusID" />
+    </Key>
+    <Property Name="BookingStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="IdentityNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
+  <EntityType Name="Floors">
+    <Key>
+      <PropertyRef Name="FloorId" />
+    </Key>
+    <Property Name="FloorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FloorName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Payments">
+    <Key>
+      <PropertyRef Name="PaymentId" />
+    </Key>
+    <Property Name="PaymentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookingId" Type="int" />
+    <Property Name="PaymentDate" Type="datetime" Nullable="false" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PaymentMethod" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="PaymentStatus">
+    <Key>
+      <PropertyRef Name="PaymentStatusID" />
+    </Key>
+    <Property Name="PaymentStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rooms">
+    <Key>
+      <PropertyRef Name="RoomId" />
+    </Key>
+    <Property Name="RoomId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoomNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="FloorId" Type="int" />
+    <Property Name="RoomType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RoomStatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="RoomStatus">
+    <Key>
+      <PropertyRef Name="RoomStatusId" />
+    </Key>
+    <Property Name="RoomStatusId" Type="int" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoomTransfers">
+    <Key>
+      <PropertyRef Name="TransferId" />
+    </Key>
+    <Property Name="TransferId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookingId" Type="int" />
+    <Property Name="FromRoomId" Type="int" />
+    <Property Name="ToRoomId" Type="int" />
+    <Property Name="TransferDate" Type="datetime" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="StaffId" />
+    </Key>
+    <Property Name="StaffId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="BirthDate" Type="date" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="ResetToken" Type="nvarchar" MaxLength="100" />
+    <Property Name="ResetTokenExpiry" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Bookings__Custom__46E78A0C">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+    <End Role="Bookings" Type="Self.Bookings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="Bookings">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Bookings__RoomId__47DBAE45">
+    <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
+    <End Role="Bookings" Type="Self.Bookings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rooms">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="Bookings">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BookingSe__Booki__5165187F">
+    <End Role="Bookings" Type="Self.Bookings" Multiplicity="0..1" />
+    <End Role="BookingServices" Type="Self.BookingServices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bookings">
+        <PropertyRef Name="BookingId" />
+      </Principal>
+      <Dependent Role="BookingServices">
+        <PropertyRef Name="BookingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BookingSe__Servi__52593CB8">
+    <End Role="Services" Type="Self.Services" Multiplicity="0..1" />
+    <End Role="BookingServices" Type="Self.BookingServices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="BookingServices">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Bookin__5535A963">
+    <End Role="Bookings" Type="Self.Bookings" Multiplicity="0..1" />
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bookings">
+        <PropertyRef Name="BookingId" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="BookingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RoomTrans__FromRoomId">
+    <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RoomTransfers" Type="Self.RoomTransfers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rooms">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="RoomTransfers">
+        <PropertyRef Name="FromRoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RoomTrans__ToRoo__4CA06362">
+    <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
+    <End Role="RoomTransfers" Type="Self.RoomTransfers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rooms">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="RoomTransfers">
+        <PropertyRef Name="ToRoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Staff__UserId__3D5E1FD2">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Staff">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__RoleId__3A81B327">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bookings_BookingStatus">
+    <End Role="BookingStatus" Type="Self.BookingStatus" Multiplicity="0..1" />
+    <End Role="Bookings" Type="Self.Bookings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookingStatus">
+        <PropertyRef Name="BookingStatusID" />
+      </Principal>
+      <Dependent Role="Bookings">
+        <PropertyRef Name="BookingStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bookings_PaymentStatus">
+    <End Role="PaymentStatus" Type="Self.PaymentStatus" Multiplicity="0..1" />
+    <End Role="Bookings" Type="Self.Bookings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentStatus">
+        <PropertyRef Name="PaymentStatusID" />
+      </Principal>
+      <Dependent Role="Bookings">
+        <PropertyRef Name="PaymentStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customers_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rooms_RoomStatus">
+    <End Role="RoomStatus" Type="Self.RoomStatus" Multiplicity="0..1" />
+    <End Role="Rooms" Type="Self.Rooms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoomStatus">
+        <PropertyRef Name="RoomStatusId" />
+      </Principal>
+      <Dependent Role="Rooms">
+        <PropertyRef Name="RoomStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoomTransfers_Booking">
+    <End Role="Bookings" Type="Self.Bookings" Multiplicity="0..1" />
+    <End Role="RoomTransfers" Type="Self.RoomTransfers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bookings">
+        <PropertyRef Name="BookingId" />
+      </Principal>
+      <Dependent Role="RoomTransfers">
+        <PropertyRef Name="BookingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KhachSanModelStoreContainer">
+    <EntitySet Name="Bookings" EntityType="Self.Bookings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BookingServices" EntityType="Self.BookingServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BookingStatus" EntityType="Self.BookingStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Floors" EntityType="Self.Floors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentStatus" EntityType="Self.PaymentStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoomStatus" EntityType="Self.RoomStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoomTransfers" EntityType="Self.RoomTransfers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Bookings__Custom__46E78A0C" Association="Self.FK__Bookings__Custom__46E78A0C">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Bookings" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Bookings__RoomId__47DBAE45" Association="Self.FK__Bookings__RoomId__47DBAE45">
+      <End Role="Rooms" EntitySet="Rooms" />
+      <End Role="Bookings" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BookingSe__Booki__5165187F" Association="Self.FK__BookingSe__Booki__5165187F">
+      <End Role="Bookings" EntitySet="Bookings" />
+      <End Role="BookingServices" EntitySet="BookingServices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BookingSe__Servi__52593CB8" Association="Self.FK__BookingSe__Servi__52593CB8">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="BookingServices" EntitySet="BookingServices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Bookin__5535A963" Association="Self.FK__Payments__Bookin__5535A963">
+      <End Role="Bookings" EntitySet="Bookings" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RoomTrans__FromRoomId" Association="Self.FK__RoomTrans__FromRoomId">
+      <End Role="Rooms" EntitySet="Rooms" />
+      <End Role="RoomTransfers" EntitySet="RoomTransfers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RoomTrans__ToRoo__4CA06362" Association="Self.FK__RoomTrans__ToRoo__4CA06362">
+      <End Role="Rooms" EntitySet="Rooms" />
+      <End Role="RoomTransfers" EntitySet="RoomTransfers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Staff__UserId__3D5E1FD2" Association="Self.FK__Staff__UserId__3D5E1FD2">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Staff" EntitySet="Staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__RoleId__3A81B327" Association="Self.FK__Users__RoleId__3A81B327">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bookings_BookingStatus" Association="Self.FK_Bookings_BookingStatus">
+      <End Role="BookingStatus" EntitySet="BookingStatus" />
+      <End Role="Bookings" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bookings_PaymentStatus" Association="Self.FK_Bookings_PaymentStatus">
+      <End Role="PaymentStatus" EntitySet="PaymentStatus" />
+      <End Role="Bookings" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customers_Users" Association="Self.FK_Customers_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rooms_RoomStatus" Association="Self.FK_Rooms_RoomStatus">
+      <End Role="RoomStatus" EntitySet="RoomStatus" />
+      <End Role="Rooms" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoomTransfers_Booking" Association="Self.FK_RoomTransfers_Booking">
+      <End Role="Bookings" EntitySet="Bookings" />
+      <End Role="RoomTransfers" EntitySet="RoomTransfers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

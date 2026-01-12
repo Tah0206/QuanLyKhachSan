@@ -1,0 +1,51 @@
+﻿@model DoAnQuanLyKhachSan.Models.Customer
+
+<div class="card shadow rounded-4 border-0">
+    <div class="card-header bg-dark text-white rounded-top-4 py-3 px-4">
+        <h5 class="mb-0">Thông tin khách hàng</h5>
+    </div>
+    <div class="card-body px-4 py-4">
+        @using (Html.BeginForm("Create", "Customers", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+        {
+            @Html.AntiForgeryToken()
+
+        <div class="row g-3">
+            <!-- Họ tên -->
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Họ và tên</label>
+                @Html.TextBoxFor(m => m.FullName, new { @class = "form-control rounded-3", placeholder = "Nguyễn Văn A", required = "required" })
+            </div>
+
+            <!-- Số điện thoại -->
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Số điện thoại</label>
+                @Html.TextBoxFor(m => m.Phone, new { @class = "form-control rounded-3", placeholder = "0909xxxxxx", required = "required" })
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Email</label>
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control rounded-3", placeholder = "abc@email.com", type = "email", required = "required" })
+            </div>
+
+            <!-- CCCD -->
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Căn cước công dân</label>
+                @Html.TextBoxFor(m => m.IdentityNumber, new { @class = "form-control rounded-3", placeholder = "012345678901", required = "required" })
+            </div>
+
+            <!-- Địa chỉ -->
+            <div class="col-12">
+                <label class="form-label fw-semibold">Địa chỉ</label>
+                @Html.TextBoxFor(m => m.Address, new { @class = "form-control rounded-3", placeholder = "123 Nguyễn Trãi, Quận 5, TP.HCM", required = "required" })
+            </div>
+            <div class="col-12 d-flex justify-content-between gap-2 mt-3">
+                <!-- Nút lưu -->
+                <button type="submit" class="btn btn-warning px-4 py-2 rounded-3">
+                    <i class="bi bi-person-plus"></i> Lưu thông tin
+                </button>
+            </div>
+        </div>
+        }
+    </div>
+</div>

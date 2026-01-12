@@ -1,0 +1,45 @@
+﻿@model DoAnQuanLyKhachSan.Models.Floor
+
+@{
+    ViewBag.Title = "Chỉnh sửa Tầng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/MyCss/CSS_All_Edit.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<div class="delete-container">
+    <div class="delete-card">
+        <div class="delete-header">
+            <h3>@ViewBag.Title</h3>
+            <p class="delete-confirm">Vui lòng cập nhật thông tin tầng</p>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="delete-details">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.FloorId)
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.FloorName)</span>
+                    <div class="detail-value">
+                        @Html.EditorFor(model => model.FloorName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FloorName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="delete-actions">
+                    <button type="submit" class="btn-delete" style="background-color: var(--primary-color)">
+                        <i class="fas fa-save"></i> Lưu thay đổi
+                    </button>
+                    <a href="@Url.Action("Index")" class="btn-cancel">
+                        <i class="fas fa-arrow-left"></i> Quay lại
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@model DoAnQuanLyKhachSan.Models.Staff
+
+@{
+    ViewBag.Title = "Xóa Nhân Viên";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="delete-container">
+    <div class="delete-card">
+        <div class="delete-header">
+            <h3>Xóa Nhân Viên</h3>
+            <p class="delete-confirm">Bạn có chắc chắn muốn xóa nhân viên này không?</p>
+        </div>
+
+        <div class="delete-details">
+            <div class="detail-row">
+                <span class="detail-label">@Html.DisplayNameFor(model => model.Phone):</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.Phone)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">@Html.DisplayNameFor(model => model.Address):</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.Address)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">@Html.DisplayNameFor(model => model.Gender):</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.Gender)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">@Html.DisplayNameFor(model => model.BirthDate):</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.BirthDate)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">@Html.DisplayNameFor(model => model.User.Username):</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.User.Username)</span>
+            </div>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="delete-actions">
+                <button type="submit" class="btn-delete">
+                    <i class="fas fa-trash-alt"></i> Xóa
+                </button>
+                <a href="@Url.Action("Index")" class="btn-cancel">
+                    <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Thêm Font Awesome nếu chưa có -->
+<link rel="stylesheet" href="~/MyCss/CSS_All_Delete.css" />

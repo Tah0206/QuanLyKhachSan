@@ -1,0 +1,57 @@
+﻿@model DoAnQuanLyKhachSan.Models.Room
+
+@{
+    ViewBag.Title = "Xóa Phòng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="~/MyCss/CSS_All_Delete.css" />
+
+<div class="delete-container">
+    <div class="delete-card">
+        <div class="delete-header">
+            <h3>Xóa Phòng</h3>
+        </div>
+
+        <div class="delete-details">
+            <div class="detail-row">
+                <span class="detail-label">Số phòng:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.RoomNumber)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Loại phòng:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.RoomType)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Giá:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.Price)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Thuộc tầng:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.Floor.FloorName)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Trạng thái:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.RoomStatu.StatusName)</span>
+            </div>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="delete-actions">
+                <button type="submit" class="btn-delete">
+                    <i class="fas fa-trash-alt"></i> Xóa
+                </button>
+                <a href="@Url.Action("Index")" class="btn-cancel">
+                    <i class="fas fa-arrow-left"></i> Trở lại
+                </a>
+            </div>
+        }
+    </div>
+</div>

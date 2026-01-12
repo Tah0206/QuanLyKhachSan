@@ -1,0 +1,155 @@
+﻿:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --secondary-color: #7c3aed;
+    --accent-color: #dc2626;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --text-color: #1f2937;
+    --light-text: #6b7280;
+    --bg-color: #f9fafb;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --border-radius: 12px;
+    --border-radius-sm: 8px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Layout */
+.user-create-container {
+    margin-left: 15px;
+    padding: 2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+}
+
+/* Form Card */
+.form-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header */
+.form-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+    .form-header h4 {
+        color: var(--text-color);
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        position: relative;
+        padding-left: 1rem;
+    }
+
+        .form-header h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            border-radius: 4px;
+        }
+
+/* Form Groups */
+.form-horizontal .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.control-label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Form Controls */
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--card-bg);
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+    .form-control:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+/* Validation */
+.text-danger {
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Buttons */
+.btn-submit {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+    .btn-submit:hover {
+        background-color: #0d9488;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+.btn-back {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #6b7280;
+    color: white;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+    .btn-back:hover {
+        background-color: #4b5563;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-create-container {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+
+    .form-card {
+        padding: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+}

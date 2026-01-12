@@ -1,0 +1,94 @@
+﻿/* ===== NỀN VÀ CĂN LỀ ===== */
+.background {
+    margin-left: 95px;
+    padding: 30px;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* ===== TIÊU ĐỀ ===== */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* ===== TIÊU ĐỀ NHỎ TRÊN FORM ===== */
+.form-horizontal h4 {
+    font-size: 20px;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* ===== NHÓM FORM ===== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* ===== LABEL ===== */
+.control-label {
+    font-weight: 600;
+    font-size: 15px;
+    color: #333;
+}
+
+/* ===== INPUT ===== */
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: #66afe9;
+        outline: none;
+    }
+
+/* ===== THÔNG BÁO LỖI ===== */
+.text-danger {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* ===== NÚT TẠO ===== */
+input[type="submit"].btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    input[type="submit"].btn:hover {
+        background-color: #2980b9;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+/* ===== LINK "QUAY VỀ" ===== */
+div > a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+    div > a:hover {
+        color: #2980b9;
+        text-decoration: underline;
+    }

@@ -1,0 +1,118 @@
+﻿@model IEnumerable<DoAnQuanLyKhachSan.Models.User>
+@{
+    ViewBag.Title = "Quản lý tài khoản";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    .search-box {
+        position: relative;
+        width: 400px;
+        margin-bottom: 20px;
+    }
+
+        .search-box input {
+            border-radius: 50px;
+            padding-left: 45px;
+            width: 300px;
+            height: 45px;
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+        }
+
+            .search-box input:focus {
+                border-color: #0d6efd;
+                box-shadow: 0 0 8px rgba(13, 110, 253, 0.2);
+            }
+
+        .search-box i {
+            pointer-events: none;
+            font-size: 16px;
+        }
+
+    .search-btn {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        height: 39px;
+        border-radius: 50px;
+        padding: 0 20px;
+        font-size: 14px;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="~/MyCss/CSS_User_Index.css" rel="stylesheet" />
+
+<div class="user-management-container">
+    <div class="user-header">
+        <h2>Quản lý người dùng</h2>
+        <a href="@Url.Action("Create", "Users")" class="btn-add-user">
+            <i class="fas fa-plus"></i> Thêm tài khoản
+        </a>
+    </div>
+
+    <form method="get" action="@Url.Action("Index")" class="search-form mb-4 d-flex">
+        <div class="search-box position-relative" style="max-width: 400px; width: 100%;">
+            <input type="text" name="search" class="form-control ps-5 pe-4"
+                   placeholder="Nhập tên, SĐT, email hoặc tài khoản..."
+                   value="@Request.QueryString["search"]" />
+            <button type="submit" class="btn btn-primary search-btn">Tìm</button>
+        </div>
+    </form>
+
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Tên đăng nhập</th>
+                <th>Mật khẩu</th>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>Vai trò</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Username</td>
+                    <td>••••••••</td> <!-- Masked password -->
+                    <td>@item.FullName</td>
+                    <td>@item.Email</td>
+                    <td>
+                        <span class="role-badge @GetRoleClass(item.Role.RoleName)">
+                            @item.Role.RoleName
+                        </span>
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <a href="@Url.Action("Edit", "Users", new { id = item.UserId })" class="btn-edit-user">
+                                <i class="fas fa-edit"></i> Sửa
+                            </a>
+                            <a href="@Url.Action("Delete", "Users", new { id = item.UserId })" class="btn-delete-user">
+                                <i class="fas fa-trash-alt"></i> Xóa
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@functions {
+    string GetRoleClass(string roleName)
+    {
+        switch (roleName.ToLower())
+        {
+            case "admin":
+                return "role-admin";
+            case "staff":
+                return "role-staff";
+            default:
+                return "role-user";
+        }
+    }
+}

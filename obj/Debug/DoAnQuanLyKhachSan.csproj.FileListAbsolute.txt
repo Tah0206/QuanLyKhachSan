@@ -1,0 +1,332 @@
+D:\DoAnQuanLyKhachSan\bin\DoAnQuanLyKhachSan.dll.config
+D:\DoAnQuanLyKhachSan\bin\DoAnQuanLyKhachSan.dll
+D:\DoAnQuanLyKhachSan\bin\DoAnQuanLyKhachSan.pdb
+D:\DoAnQuanLyKhachSan\bin\roslyn\csc.exe
+D:\DoAnQuanLyKhachSan\bin\roslyn\csc.exe.config
+D:\DoAnQuanLyKhachSan\bin\roslyn\csc.rsp
+D:\DoAnQuanLyKhachSan\bin\roslyn\csi.exe
+D:\DoAnQuanLyKhachSan\bin\roslyn\csi.exe.config
+D:\DoAnQuanLyKhachSan\bin\roslyn\csi.rsp
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.Managed.Core.targets
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DoAnQuanLyKhachSan\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.AppContext.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Collections.Immutable.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Console.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Globalization.Calendars.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.IO.Compression.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.IO.FileSystem.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Net.Http.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Net.Sockets.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Reflection.Metadata.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.ValueTuple.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Xml.XmlDocument.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Xml.XPath.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\DoAnQuanLyKhachSan\bin\roslyn\vbc.exe
+D:\DoAnQuanLyKhachSan\bin\roslyn\vbc.exe.config
+D:\DoAnQuanLyKhachSan\bin\roslyn\vbc.rsp
+D:\DoAnQuanLyKhachSan\bin\roslyn\VBCSCompiler.exe
+D:\DoAnQuanLyKhachSan\bin\roslyn\VBCSCompiler.exe.config
+D:\DoAnQuanLyKhachSan\bin\Antlr3.Runtime.dll
+D:\DoAnQuanLyKhachSan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DoAnQuanLyKhachSan\bin\Microsoft.Web.Infrastructure.dll
+D:\DoAnQuanLyKhachSan\bin\Newtonsoft.Json.dll
+D:\DoAnQuanLyKhachSan\bin\System.Web.Helpers.dll
+D:\DoAnQuanLyKhachSan\bin\System.Web.Mvc.dll
+D:\DoAnQuanLyKhachSan\bin\System.Web.Optimization.dll
+D:\DoAnQuanLyKhachSan\bin\System.Web.Razor.dll
+D:\DoAnQuanLyKhachSan\bin\System.Web.WebPages.Deployment.dll
+D:\DoAnQuanLyKhachSan\bin\System.Web.WebPages.dll
+D:\DoAnQuanLyKhachSan\bin\System.Web.WebPages.Razor.dll
+D:\DoAnQuanLyKhachSan\bin\WebGrease.dll
+D:\DoAnQuanLyKhachSan\bin\System.Web.Helpers.xml
+D:\DoAnQuanLyKhachSan\bin\System.Web.Mvc.xml
+D:\DoAnQuanLyKhachSan\bin\System.Web.Optimization.xml
+D:\DoAnQuanLyKhachSan\bin\System.Web.Razor.xml
+D:\DoAnQuanLyKhachSan\bin\System.Web.WebPages.xml
+D:\DoAnQuanLyKhachSan\bin\System.Web.WebPages.Deployment.xml
+D:\DoAnQuanLyKhachSan\bin\System.Web.WebPages.Razor.xml
+D:\DoAnQuanLyKhachSan\bin\Newtonsoft.Json.xml
+D:\DoAnQuanLyKhachSan\bin\Antlr3.Runtime.pdb
+D:\DoAnQuanLyKhachSan\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DoAnQuanLyKhachSan\obj\Debug\DoAnQuanLyKhachSan.csproj.AssemblyReference.cache
+D:\DoAnQuanLyKhachSan\obj\Debug\DoAnQuanLyKhachSan.csproj.CoreCompileInputs.cache
+D:\DoAnQuanLyKhachSan\obj\Debug\DoAnQuan.5684DC22.Up2Date
+D:\DoAnQuanLyKhachSan\obj\Debug\DoAnQuanLyKhachSan.dll
+D:\DoAnQuanLyKhachSan\obj\Debug\DoAnQuanLyKhachSan.pdb
+D:\DoAnQuanLyKhachSan\bin\EntityFramework.dll
+D:\DoAnQuanLyKhachSan\bin\EntityFramework.SqlServer.dll
+D:\DoAnQuanLyKhachSan\bin\EntityFramework.xml
+D:\DoAnQuanLyKhachSan\bin\EntityFramework.SqlServer.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\DoAnQuanLyKhachSan.dll.config
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\DoAnQuanLyKhachSan.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\DoAnQuanLyKhachSan.pdb
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csc.exe
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csc.exe.config
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csc.rsp
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csi.exe
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csi.exe.config
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csi.rsp
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.Managed.Core.targets
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.AppContext.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Collections.Immutable.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Console.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Globalization.Calendars.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.Compression.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.FileSystem.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Net.Http.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Net.Sockets.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Reflection.Metadata.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.ValueTuple.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.XmlDocument.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.XPath.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\vbc.exe
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\vbc.exe.config
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\vbc.rsp
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\VBCSCompiler.exe
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\VBCSCompiler.exe.config
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\Antlr3.Runtime.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.SqlServer.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\Microsoft.Web.Infrastructure.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\Newtonsoft.Json.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Helpers.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Mvc.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Optimization.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Razor.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Deployment.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Razor.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\WebGrease.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.SqlServer.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Helpers.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Mvc.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Optimization.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Razor.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Deployment.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Razor.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\Newtonsoft.Json.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\Antlr3.Runtime.pdb
+D:\NHOM12_WEBQUANLYKHACHSAN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.csproj.AssemblyReference.cache
+D:\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.csproj.CoreCompileInputs.cache
+D:\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuan.5684DC22.Up2Date
+D:\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.dll
+D:\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.pdb
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\DoAnQuanLyKhachSan.dll.config
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\DoAnQuanLyKhachSan.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\DoAnQuanLyKhachSan.pdb
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csc.exe
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csc.exe.config
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csc.rsp
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csi.exe
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csi.exe.config
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csi.rsp
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.AppContext.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Collections.Immutable.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Console.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Globalization.Calendars.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.Compression.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.FileSystem.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Net.Http.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Net.Sockets.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Reflection.Metadata.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.ValueTuple.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.XPath.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\vbc.exe
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\vbc.exe.config
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\vbc.rsp
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\VBCSCompiler.exe
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\VBCSCompiler.exe.config
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Antlr3.Runtime.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.SqlServer.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Microsoft.Web.Infrastructure.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Newtonsoft.Json.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Helpers.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Mvc.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Optimization.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Razor.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Deployment.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Razor.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\WebGrease.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.SqlServer.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Helpers.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Mvc.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Optimization.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Razor.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Deployment.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Razor.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Newtonsoft.Json.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Antlr3.Runtime.pdb
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.csproj.AssemblyReference.cache
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.csproj.CoreCompileInputs.cache
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuan.5684DC22.Up2Date
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.dll
+D:\Code\Code HTML\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.pdb
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\DoAnQuanLyKhachSan.dll.config
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\DoAnQuanLyKhachSan.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\DoAnQuanLyKhachSan.pdb
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csc.exe
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csc.exe.config
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csc.rsp
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csi.exe
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csi.exe.config
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\csi.rsp
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.AppContext.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Collections.Immutable.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Console.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Globalization.Calendars.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.Compression.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.FileSystem.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Net.Http.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Net.Sockets.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Reflection.Metadata.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.ValueTuple.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.XPath.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\vbc.exe
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\vbc.exe.config
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\vbc.rsp
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\VBCSCompiler.exe
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\roslyn\VBCSCompiler.exe.config
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Antlr3.Runtime.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.SqlServer.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Microsoft.Web.Infrastructure.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Newtonsoft.Json.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Helpers.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Mvc.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Optimization.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Razor.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Deployment.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Razor.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\WebGrease.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\EntityFramework.SqlServer.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Helpers.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Mvc.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Optimization.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.Razor.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Deployment.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\System.Web.WebPages.Razor.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Newtonsoft.Json.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Antlr3.Runtime.pdb
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.csproj.AssemblyReference.cache
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.csproj.CoreCompileInputs.cache
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuan.5684DC22.Up2Date
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.dll
+D:\Code\Code Web\2025\Tester\NHOM12_WEBQUANLYKHACHSAN\obj\Debug\DoAnQuanLyKhachSan.pdb

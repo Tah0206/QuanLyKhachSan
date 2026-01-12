@@ -1,0 +1,252 @@
+﻿:root {
+    --text-color: rgb(5, 64, 18);
+    --font-family: 'Arial', sans-serif;
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --occupied-color: #ffdddd;
+    --reserved-color: #fffacc;
+    --empty-color: #ddffdd;
+    --margin-left: 200px;
+    --margin-right: 300px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: #f5f5f5;
+}
+
+.background {
+    position: absolute;
+    top: 65px;
+    left: 225px;
+    right: 0;
+    bottom: 50px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-color);
+}
+
+/* Room Grid Layout */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.room-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+    .room-box.empty {
+        background-color: var(--empty-color);
+        border: 2px solid var(--success-color);
+    }
+
+    .room-box.reserved {
+        background-color: var(--reserved-color);
+        border: 2px solid var(--warning-color);
+    }
+
+    .room-box.occupied {
+        background-color: var(--occupied-color);
+        border: 2px solid var(--accent-color);
+    }
+
+    .room-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+.room-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.room-type {
+    color: var(--dark-color);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.room-price {
+    font-weight: bold;
+    color: var(--success-color);
+    margin-bottom: 5px;
+}
+
+.room-floor {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.room-status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+    /* Trạng thái phòng */
+    .room-status.empty {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .room-status.booked {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+
+    .room-status.inuse {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+/* Action Buttons */
+.action-buttons {
+    display: none;
+    margin-top: 10px;
+    justify-content: center;
+    gap: 5px;
+}
+
+.room-box.active .action-buttons {
+    display: flex;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.edit-btn {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+    .edit-btn:hover {
+        background-color: #e67e22;
+    }
+
+.details-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+    .details-btn:hover {
+        background-color: #2980b9;
+    }
+
+.delete-btn {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+    .delete-btn:hover {
+        background-color: #c0392b;
+    }
+
+/* Create New Button */
+.create-new-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--success-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+    .create-new-btn:hover {
+        background-color: #219653;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .close:hover {
+        color: black;
+    }
+
+.modal-title {
+    margin-top: 0;
+    color: var(--primary-color);
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .background {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .room-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

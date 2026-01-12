@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DoAnQuanLyKhachSan.Models.Staff>
+
+@{
+    ViewBag.Title = "Quản lý nhân viên";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="~/MyCss/CSS_Staff_Index.css" />
+
+<div class="staff-container">
+    <div class="staff-header">
+        <h2>Quản lý nhân viên</h2>
+        <div class="staff-actions">
+            <a href="@Url.Action("Create", "Staffs")" class="btn-add">Thêm nhân viên</a>
+        </div>
+    </div>
+
+    <table class="staff-table">
+        <thead>
+            <tr>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Giới tính</th>
+                <th>Ngày sinh</th>
+                <th>Họ và tên</th>
+                <th>Vai trò</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Phone</td>
+                    <td>@item.Address</td>
+                    <td>@item.Gender</td>
+                    <td>@item.BirthDate</td>
+                    <td>@item.User.FullName</td>
+                    <td>@item.User.Role.RoleName</td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Staffs", new { id = item.StaffId })" class="btn-edit">✏️</a>
+                        <a href="@Url.Action("Delete", "Staffs", new { id = item.StaffId })" class="btn-delete">🗑️</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

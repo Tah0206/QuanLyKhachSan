@@ -1,0 +1,23 @@
+﻿@model DoAnQuanLyKhachSan.Models.ViewModel.RoomTransferViewModel
+
+@using (Html.BeginForm("ChuyenPhong", "RoomTransfers", FormMethod.Post, new { id = "formTransferRoom" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.BookingId)
+    @Html.HiddenFor(m => m.FromRoomId)
+
+    <div class="mb-3">
+        <label><strong>Phòng hiện tại:</strong></label>
+        <p class="form-control-plaintext">@Model.FromRoomName</p>
+    </div>
+
+    <div class="mb-3">
+        <label><strong>Chuyển sang phòng:</strong></label>
+        @Html.DropDownListFor(m => m.ToRoomId, Model.AvailableRooms, "Chọn phòng", new { @class = "form-control" })
+    </div>
+
+    <div class="text-end">
+        <button type="submit" class="btn btn-primary">Xác nhận chuyển</button>
+    </div>
+}
+

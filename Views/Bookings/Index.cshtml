@@ -1,0 +1,112 @@
+﻿@model IEnumerable<DoAnQuanLyKhachSan.Models.Booking>
+@{
+    ViewBag.Title = "Danh Sách Đặt Phòng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/MyCss/CSS_Booking_Index.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="booking-management-container">
+        <div class="booking-header">
+            <h2>Quản lý đặt phòng</h2>
+            <a href="@Url.Action("Create")" class="btn-add-booking">
+                <i class="fas fa-plus"></i> Đặt Phòng
+            </a>
+        </div>
+
+        <table class="booking-table">
+            <thead>
+                <tr>
+                    <th>Ngày nhận phòng</th>
+                    <th>Ngày trả phòng</th>
+                    <th>Số người</th>
+                    <th>Ghi chú</th>
+                    <th>Khách hàng</th>
+                    <th>Phòng</th>
+                    <th>Trạng thái đặt phòng</th>
+                    <th>Trạng thái thanh toán</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CheckInDate.</td>
+                        <td>@item.CheckOutDate.</td>
+                        <td>@item.NumberOfPeople</td>
+                        <td>@(string.IsNullOrEmpty(item.Note) ? "Không có" : item.Note)</td>
+                        <td>@item.Customer.FullName</td>
+                        <td>@item.Room.RoomNumber</td>
+                        <td>
+                            <span class="status-badge @GetBookingStatusClass(item.BookingStatu.StatusName)">
+                                @item.BookingStatu.StatusName
+                            </span>
+                        </td>
+                        <td>
+                            <span class="status-badge @GetPaymentStatusClass(item.PaymentStatu.StatusName)">
+                                @item.PaymentStatu.StatusName
+                            </span>
+                        </td>
+                        <td>
+                            <div class="action-buttons">
+                                <a href="@Url.Action("Edit", new { id = item.BookingId })" class="btn-edit-booking">
+                                    <i class="fas fa-edit"></i> Sửa
+                                </a>
+                                <a href="@Url.Action("Delete", new { id = item.BookingId })" class="btn-delete-booking">
+                                    <i class="fas fa-trash-alt"></i> Xóa
+                                </a>
+                                @*@Html.ActionLink("Thanh toán", "Pay", "Payment", new { bookingId = item.BookingId }, new { @class = "btn btn-success btn-sm" })*@
+
+                                <a href="@Url.Action("Pay", "Payment", new { bookingId = item.BookingId })"
+                                   class="btn-edit-booking">
+                                    <i class="bi bi-credit-card"></i> Thanh toán
+                                </a>
+
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+@functions {
+    string GetBookingStatusClass(string statusName)
+    {
+        switch (statusName.ToLower())
+        {
+            case "đã xác nhận":
+                return "status-confirmed";
+            case "đang chờ":
+                return "status-pending";
+            case "đã hủy":
+                return "status-cancelled";
+            default:
+                return "";
+        }
+    }
+
+    string GetPaymentStatusClass(string statusName)
+    {
+        switch (statusName.ToLower())
+        {
+            case "đã thanh toán":
+                return "payment-paid";
+            case "chưa thanh toán":
+                return "payment-pending";
+            case "thanh toán thất bại":
+                return "payment-failed";
+            default:
+                return "";
+        }
+    }
+}

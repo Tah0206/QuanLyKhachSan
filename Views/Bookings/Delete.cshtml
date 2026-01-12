@@ -1,0 +1,76 @@
+﻿@model DoAnQuanLyKhachSan.Models.Booking
+
+@{
+    ViewBag.Title = "Xóa Đặt Phòng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Thêm Font Awesome nếu cần icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="~/MyCss/CSS_All_Delete.css" />
+
+<div class="delete-container">
+    <div class="delete-card">
+        <div class="delete-header">
+            <h3>Xóa Đặt Phòng</h3>
+        </div>
+
+        <div class="delete-details">
+            <div class="detail-row">
+                <span class="detail-label">Khách hàng:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.Customer.FullName)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Phòng:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.Room.RoomNumber)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Ngày nhận phòng:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.CheckInDate)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Ngày trả phòng:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.CheckOutDate)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Số người:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.NumberOfPeople)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Trạng thái đặt phòng:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.BookingStatu.StatusName)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Trạng thái thanh toán:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.PaymentStatu.StatusName)</span>
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model.Note))
+            {
+                <div class="detail-row">
+                    <span class="detail-label">Ghi chú:</span>
+                    <span class="detail-value">@Html.DisplayFor(model => model.Note)</span>
+                </div>
+            }
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="delete-actions">
+                <button type="submit" class="btn-delete">
+                    <i class="fas fa-trash-alt"></i> Xóa
+                </button>
+                <a href="@Url.Action("Index")" class="btn-cancel">
+                    <i class="fas fa-arrow-left"></i> Trở lại
+                </a>
+            </div>
+        }
+    </div>
+</div>

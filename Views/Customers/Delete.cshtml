@@ -1,0 +1,63 @@
+﻿@model DoAnQuanLyKhachSan.Models.Customer
+
+@{
+    ViewBag.Title = "Xóa Khách Hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Font Awesome nếu dùng icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="~/MyCss/CSS_All_Delete.css" />
+
+<div class="delete-container">
+    <div class="delete-card">
+        <div class="delete-header">
+            <h3>Xóa Khách Hàng</h3>
+        </div>
+
+        <div class="delete-details">
+            <div class="detail-row">
+                <span class="detail-label">Họ tên:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.FullName)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Số điện thoại:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.Phone)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Email:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.Email)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">CCCD/CMND:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.IdentityNumber)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Địa chỉ:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.Address)</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Tài khoản:</span>
+                <span class="detail-value">@Html.DisplayFor(model => model.User.Username)</span>
+            </div>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="delete-actions">
+                <button type="submit" class="btn-delete">
+                    <i class="fas fa-trash-alt"></i> Xóa
+                </button>
+                <a href="@Url.Action("Index")" class="btn-cancel">
+                    <i class="fas fa-arrow-left"></i> Trở lại
+                </a>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,210 @@
+﻿/* Reset và font chung */
+.floor-management {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+    .header-container h1 {
+        font-size: 2rem;
+        color: #2c3e50;
+        margin: 0;
+    }
+
+/* Nút */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.add-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+    .add-btn:hover {
+        background-color: #219653;
+    }
+
+.edit-btn {
+    background-color: #f39c12;
+    color: white;
+}
+
+.details-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Hiển thị tòa nhà */
+.building-visualization {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .building-visualization h3 {
+        color: #e74c3c;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 10;
+    }
+
+.building {
+    position: relative;
+    width: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: -20px; /* Đưa tòa nhà lên gần tên hơn */
+}
+
+.floor {
+    width: 200px;
+    height: 60px;
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+    .floor:first-child {
+        border-bottom: none;
+    }
+
+    .floor:not(:first-child) {
+        border-bottom: none;
+    }
+
+.floor-name {
+    font-size: 1rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.building-roof {
+    width: 220px;
+    height: 30px;
+    background-color: #e74c3c;
+    clip-path: polygon(0% 100%, 10% 0%, 90% 0%, 100% 100%);
+    position: relative;
+}
+
+.building-base {
+    width: 250px;
+    height: 20px;
+    background-color: #34495e;
+}
+
+/* Hiệu ứng khi thêm tầng mới */
+@keyframes addFloor {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.new-floor {
+    animation: addFloor 0.8s ease-out;
+}
+
+/* Bảng danh sách */
+.floor-table {
+    margin-top: 50px;
+    overflow-x: auto;
+}
+
+    .floor-table table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .floor-table th {
+        background-color: #34495e;
+        color: white;
+        padding: 15px;
+        text-align: left;
+    }
+
+    .floor-table td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ecf0f1;
+    }
+
+    .floor-table tr:hover td {
+        background-color: #f8f9fa;
+    }
+
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .building-visualization h3 {
+        font-size: 1.2rem;
+    }
+
+    .building {
+        width: 100%;
+    }
+
+    .floor {
+        width: 80%;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+        .actions .btn {
+            width: 100%;
+            text-align: center;
+        }
+}

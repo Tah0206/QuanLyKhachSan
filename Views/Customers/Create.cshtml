@@ -1,0 +1,87 @@
+﻿@model DoAnQuanLyKhachSan.Models.Customer
+@{
+    ViewBag.Title = "Tạo Khách Hàng Mới";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    // Sửa lỗi dropdown - đảm bảo controller truyền ViewBag.UserId
+    var userList = ViewBag.UserId as IEnumerable<SelectListItem>;
+}
+<link href="~/MyCss/CSS_All_Create.css" rel="stylesheet" />
+<div class="user-create-container">
+    <div class="form-card">
+        <div class="form-header">
+            <h4>@ViewBag.Title</h4>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FullName,"Họ và Tên", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Phone,"Số Điện Thoại", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IdentityNumber,"Mã Khách Hàng", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @Html.EditorFor(model => model.IdentityNumber, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.IdentityNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Address,"Địa Chỉ", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserId, "Tài khoản người dùng", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @if (userList != null)
+                        {
+                            @Html.DropDownList("UserId", userList, "Chọn tài khoản", new { @class = "form-control" })
+                        }
+                        else
+                        {
+                            <select class="form-control" disabled>
+                                <option>Không có tài khoản nào</option>
+                            </select>
+                        }
+                        @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <input type="submit" value="Tạo Khách Hàng" class="btn-submit" />
+                    @Html.ActionLink("Quay lại Danh sách", "Index", null, new { @class = "btn-back" })
+                </div>
+            </div>
+        }
+    </div>
+</div>

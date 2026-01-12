@@ -1,0 +1,183 @@
+﻿@{
+    ViewBag.Title = "Dining";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Cappella Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.8;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            height: 450px;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+        }
+
+            .hero h1 {
+                font-size: 3.8rem;
+                font-weight: bold;
+            }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .dining-img {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #ccc;
+            padding: 10px 0;
+        }
+
+        .chef-card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .review {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .btn-back-big {
+            font-size: 1.8rem;
+            padding: 25px 0;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nút quay lại trên đầu -->
+    <div class="text-start">
+        <a href="@Url.Action("TrangChuNguoiDung", "Home")" class="btn btn-secondary m-3">← Quay về Trang chủ</a>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Ẩm Thực tại Cappella Hotel</h1>
+    </div>
+
+    <!-- Giới thiệu -->
+    <div class="container section">
+        <h2 class="text-center mb-4">Trải nghiệm Ẩm Thực Đỉnh Cao</h2>
+        <p>
+            Tại Cappella Hotel, ẩm thực không chỉ là bữa ăn, mà là một hành trình trải nghiệm.
+            Từ những món Việt truyền thống đậm đà hương vị quê hương, đến ẩm thực quốc tế tinh tế,
+            chúng tôi mang đến cho bạn sự kết hợp hoàn hảo giữa hiện đại và truyền thống.
+        </p>
+        <p>
+            Không gian nhà hàng được thiết kế sang trọng, hiện đại nhưng vẫn giữ được sự ấm cúng,
+            là nơi lý tưởng cho mọi dịp: từ bữa sáng nhanh gọn, tiệc gia đình, buổi gặp gỡ đối tác đến bữa tối lãng mạn bên người thương.
+        </p>
+    </div>
+
+    <!-- Không gian & Hình ảnh -->
+    <div class="container section">
+        <h2 class="text-center mb-4">Không Gian Nhà Hàng</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1555992336-cbfcd4f0f7d4?auto=format&fit=crop&w=800&q=80" class="img-fluid dining-img">
+                <p class="mt-3">Không gian Fine Dining với ánh sáng ấm và âm nhạc du dương.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" class="img-fluid dining-img">
+                <p class="mt-3">Buffet đa dạng các món Việt – Á – Âu đổi mới mỗi ngày.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36?auto=format&fit=crop&w=800&q=80" class="img-fluid dining-img">
+                <p class="mt-3">Bar & Lounge thư giãn cùng cocktail và tầm nhìn thành phố.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu mẫu -->
+    <div class="container section">
+        <h2 class="text-center mb-4">Thực Đơn Nổi Bật</h2>
+        <div class="menu-item"><span>Beef Steak Cappella</span><span>550,000 VNĐ</span></div>
+        <div class="menu-item"><span>Sushi Set Nhật Bản</span><span>450,000 VNĐ</span></div>
+        <div class="menu-item"><span>Bún Bò Huế Truyền Thống</span><span>150,000 VNĐ</span></div>
+        <div class="menu-item"><span>Pasta Hải Sản Sốt Kem</span><span>280,000 VNĐ</span></div>
+        <div class="menu-item"><span>Salad Quinoa Chay</span><span>180,000 VNĐ</span></div>
+        <div class="menu-item"><span>Rượu Vang Ý Cao Cấp</span><span>1,200,000 VNĐ</span></div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="container section">
+        <h2 class="text-center mb-4">Thư Viện Hình Ảnh</h2>
+        <div class="row g-3">
+            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80" class="img-fluid dining-img"></div>
+            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1516685018646-549d8fbc0b27?auto=format&fit=crop&w=800&q=80" class="img-fluid dining-img"></div>
+            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" class="img-fluid dining-img"></div>
+            <div class="col-md-3"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" class="img-fluid dining-img"></div>
+        </div>
+    </div>
+
+    <!-- Đầu bếp -->
+    <div class="container section">
+        <h2 class="text-center mb-4">Gặp Gỡ Đầu Bếp Của Chúng Tôi</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-3 text-center chef-card">
+                <img src="https://images.unsplash.com/photo-1606788075761-1f4b1c1fcfa8?auto=format&fit=crop&w=400&q=80">
+                <h5 class="mt-3">Chef Nguyễn Văn A</h5>
+                <p>Chuyên gia ẩm thực Âu – Á với 20 năm kinh nghiệm.</p>
+            </div>
+            <div class="col-md-3 text-center chef-card">
+                <img src="https://images.unsplash.com/photo-1607344645866-009a469d1a8b?auto=format&fit=crop&w=400&q=80">
+                <h5 class="mt-3">Chef Maria Rossi</h5>
+                <p>Đầu bếp Ý nổi tiếng với các món Pasta và rượu vang.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Đánh giá khách hàng -->
+    <div class="container section">
+        <h2 class="text-center mb-4">Khách Hàng Nói Gì?</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="review">
+                    <strong>Ngọc Hân</strong><br>
+                    "Đồ ăn tuyệt vời, nhân viên phục vụ thân thiện, không gian sang trọng. Rất hài lòng!"
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="review">
+                    <strong>Minh Tuấn</strong><br>
+                    "Buffet đa dạng, chất lượng món ăn ổn định, đầu bếp thân thiện. Sẽ quay lại!"
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="review">
+                    <strong>Hoài Phương</strong><br>
+                    "Bữa tối trên sân thượng là trải nghiệm tuyệt vời nhất của tôi tại khách sạn."
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

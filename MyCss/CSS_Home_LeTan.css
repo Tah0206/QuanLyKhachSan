@@ -1,0 +1,291 @@
+﻿:root {
+    --text-color: rgb(5, 64, 18);
+    --font-family: 'Arial', sans-serif;
+    --margin-left: 145px;
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --occupied-color: #ffdddd;
+    --empty-color: #ddffdd;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: #f5f5f5;
+}
+
+.sidebar2 {
+    width: 300px;
+    background-color: white;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+    z-index: 900;
+}
+
+.sidebar-list2 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.payment-header {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+
+.payment-details {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.payment-total {
+    padding: 15px 20px;
+    background-color: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.total-label {
+    color: var(--dark-color);
+}
+
+.total-amount {
+    color: var(--accent-color);
+}
+
+.payment-button,
+.return-room-button {
+    padding: 15px;
+    margin: 5px 10px;
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.return-room-button {
+    background-color: var(--warning-color);
+}
+
+.payment-button:hover {
+    background-color: #219653;
+}
+
+.return-room-button:hover {
+    background-color: #e67e22;
+}
+
+.container {
+    margin-left: 50px;
+    margin-right: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    min-width: 120px;
+}
+
+    .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .box.selected {
+        border: 3px solid var(--secondary-color);
+        background-color: #e1f0fa;
+    }
+
+    .box.occupied {
+        background-color: var(--occupied-color);
+        border: 2px solid #ff9999;
+    }
+
+    .box.empty {
+        background-color: var(--empty-color);
+        border: 2px solid #99ff99;
+    }
+
+.room-status {
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+    .room-status.empty {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .room-status.occupied {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+.open-room-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    min-width: 100px;
+}
+
+    .open-room-btn:hover {
+        background-color: #2980b9;
+    }
+
+.no-services {
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .close:hover {
+        color: black;
+    }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+.submit-btn {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+    .submit-btn:hover {
+        background-color: #219653;
+    }
+
+/* Thêm vào file CSS của bạn */
+.box {
+    position: relative;
+    /* Các style khác giữ nguyên */
+}
+
+.room-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 40px); /* Trừ đi chiều cao nút */
+}
+
+.open-room-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    max-width: 120px;
+    padding: 8px 0;
+    text-align: center;
+    /* Các style khác giữ nguyên */
+}
+
+/* Sửa lại phần box để tránh nút bị lơ lửng */
+.box.empty {
+    padding-bottom: 40px; /* Tạo khoảng trống cho nút */
+}

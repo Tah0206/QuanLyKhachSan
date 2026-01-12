@@ -1,0 +1,10 @@
+﻿@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-panel {
+        order: -1;
+        margin-bottom: 8px;
+    }
+}

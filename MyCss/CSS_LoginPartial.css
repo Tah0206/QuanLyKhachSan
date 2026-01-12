@@ -1,0 +1,42 @@
+﻿/* Login Partial Styles */
+.navbar-nav.navbar-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: auto;
+}
+
+    .navbar-nav.navbar-right li {
+        list-style: none;
+    }
+
+    .navbar-nav.navbar-right a.nav-link {
+        color: #aaa;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .navbar-nav.navbar-right a.nav-link:hover {
+            color: var(--secondary-color);
+        }
+
+/* If using a dark navbar background like footer */
+.navbar {
+    background-color: #111;
+}
+
+    .navbar .nav-link {
+        color: #aaa;
+    }
+
+        .navbar .nav-link:hover {
+            color: var(--secondary-color);
+        }
+
+/* Optional logout button styling */
+#logoutForm {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

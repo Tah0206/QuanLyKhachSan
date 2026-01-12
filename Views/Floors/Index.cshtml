@@ -1,0 +1,56 @@
+﻿@model IEnumerable<DoAnQuanLyKhachSan.Models.Floor>
+
+@{
+    ViewBag.Title = "Quản lý tầng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel=" stylesheet" href="~/MyCss/CSS_Floors_Index.css" />
+
+<div class="floor-management">
+    <div class="header-container">
+        <h1>Quản lý tầng</h1>
+        <div class="button-group">
+            <a href="@Url.Action("Create", "Floors")" class="btn add-btn">Thêm tầng</a>
+        </div>
+    </div>
+
+    <div class="building-visualization">
+        <h3>HUFLIT HOTEL</h3>
+        <div class="building" id="building">
+            @foreach (var floor in Model.OrderBy(f => f.FloorId))
+            {
+                <div class="floor" data-floor-id="@floor.FloorId">
+                    <span class="floor-name">@floor.FloorName</span>
+                </div>
+            }
+            <div class="building-roof"></div>
+            <div class="building-base"></div>
+        </div>
+    </div>
+
+    <div class="floor-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã tầng</th>
+                    <th>Tên tầng</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.FloorId</td>
+                        <td>@item.FloorName</td>
+                        <td class="actions">
+                            <a href="@Url.Action("Edit", "Floors", new { id = item.FloorId })" class="btn edit-btn">Sửa</a>
+                            <a href="@Url.Action("Delete", "Floors", new { id = item.FloorId })" class="btn delete-btn">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="~/MyJs/Floor_Index.js"></script>

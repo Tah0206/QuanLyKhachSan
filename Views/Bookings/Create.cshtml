@@ -1,0 +1,142 @@
+﻿@model DoAnQuanLyKhachSan.Models.Booking
+@{
+    ViewBag.Title = "Tạo Đặt Phòng Mới";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    // Lấy danh sách cho dropdown
+    var customerList = ViewBag.CustomerId as IEnumerable<SelectListItem>;
+    var roomList = ViewBag.RoomId as IEnumerable<SelectListItem>;
+    var paymentStatusList = ViewBag.PaymentStatusID as IEnumerable<SelectListItem>;
+    var bookingStatusList = ViewBag.BookingStatusID as IEnumerable<SelectListItem>;
+}
+<link rel="stylesheet" href="~/MyCss/CSS_All_Create.css" />
+<div class="user-create-container">
+    <div class="form-card">
+        <div class="form-header">
+            <h4>@ViewBag.Title</h4>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <!-- Khách hàng -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CustomerId, "Khách hàng", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @if (customerList != null)
+                        {
+                            @Html.DropDownList("CustomerId", customerList, "Chọn khách hàng", new { @class = "form-control" })
+                        }
+                        else
+                        {
+                            <select class="form-control" disabled>
+                                <option>Không có khách hàng nào</option>
+                            </select>
+                        }
+                        @Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Phòng -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RoomId, "Phòng", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @if (roomList != null)
+                        {
+                            @Html.DropDownList("RoomId", roomList, "Chọn phòng", new { @class = "form-control" })
+                        }
+                        else
+                        {
+                            <select class="form-control" disabled>
+                                <option>Không có phòng nào</option>
+                            </select>
+                        }
+                        @Html.ValidationMessageFor(model => model.RoomId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Ngày nhận phòng -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CheckInDate, "Ngày nhận phòng", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @Html.EditorFor(model => model.CheckInDate, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                        @Html.ValidationMessageFor(model => model.CheckInDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Ngày trả phòng -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CheckOutDate, "Ngày trả phòng", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @Html.EditorFor(model => model.CheckOutDate, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                        @Html.ValidationMessageFor(model => model.CheckOutDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Số người -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NumberOfPeople, "Số người", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @Html.EditorFor(model => model.NumberOfPeople, new { htmlAttributes = new { @class = "form-control", min = "1" } })
+                        @Html.ValidationMessageFor(model => model.NumberOfPeople, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Ghi chú -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Note, "Ghi chú", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @Html.TextAreaFor(model => model.Note, new { @class = "form-control", rows = "3" })
+                        @Html.ValidationMessageFor(model => model.Note, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Trạng thái thanh toán -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PaymentStatusID, "Trạng thái thanh toán", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @if (paymentStatusList != null)
+                        {
+                            @Html.DropDownList("PaymentStatusID", paymentStatusList, "Chọn trạng thái", new { @class = "form-control" })
+                        }
+                        else
+                        {
+                            <select class="form-control" disabled>
+                                <option>Không có trạng thái nào</option>
+                            </select>
+                        }
+                        @Html.ValidationMessageFor(model => model.PaymentStatusID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Trạng thái đặt phòng -->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.BookingStatusID, "Trạng thái đặt phòng", htmlAttributes: new { @class = "control-label" })
+                    <div class="input-field">
+                        @if (bookingStatusList != null)
+                        {
+                            @Html.DropDownList("BookingStatusID", bookingStatusList, "Chọn trạng thái", new { @class = "form-control" })
+                        }
+                        else
+                        {
+                            <select class="form-control" disabled>
+                                <option>Không có trạng thái nào</option>
+                            </select>
+                        }
+                        @Html.ValidationMessageFor(model => model.BookingStatusID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Nút submit -->
+                <div class="form-actions">
+                    <input type="submit" value="Tạo Đặt Phòng" class="btn-submit" />
+                    @Html.ActionLink("Quay lại Danh sách", "Index", null, new { @class = "btn-back" })
+                </div>
+            </div>
+        }
+    </div>
+</div>

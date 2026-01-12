@@ -1,0 +1,238 @@
+﻿@model DoAnQuanLyKhachSan.Models.Customer
+
+@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Views/Shared/_LayoutKhachHang.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khách sạn sang trọng | HUFLIT HOTEL</title>
+    <meta name="description" content="Trải nghiệm dịch vụ lưu trú sang trọng tại khách sạn cao cấp của chúng tôi">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/MyCss/CSS_Home_Index.css">
+ 
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+    @if (ViewBag.SuccessMessage != null)
+    {
+        <div class="alert alert-success" style="position: fixed; top: 70px; right: 20px; z-index: 9999;">
+            @ViewBag.SuccessMessage
+        </div>
+    }
+    <!-- Video Header -->
+    <section class="video-header">
+        <video autoplay loop muted playsinline class="video-background">
+            <source src="~/Videos/Ra mắt khách sạn Capella Hanoi.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <div class="header-content">
+            <h1> LUXURY </h1>
+            <p>Một chốn nghỉ dưỡng vượt thời gian giữa lòng thành phố</p>
+        </div>
+
+        <!-- Modal: Đặt phòng -->
+        <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bookingModalLabel">Đặt phòng</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                    </div>
+                    <div class="modal-body">
+                        @Html.Partial("_BookingFormPartial")
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal: Nhập thông tin khách hàng -->
+        <div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="customerModalLabel">Thông tin khách hàng</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        @Html.Partial("_CustomerFormPartial")
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>Kéo xuống</span>
+            <svg viewBox="0 0 24 24">
+                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Nội dung chính -->
+    <main class="main-content">
+        <!-- Phần phòng ở -->
+        <section class="section accommodation-section">
+            <div class="container">
+                <h2 class="section-title">Phòng nghỉ</h2>
+                <p class="section-subtitle">Sự tinh tế giản dị kết hợp thiết kế độc đáo</p>
+
+                <div class="room-types">
+                    <!-- Loại phòng 1 -->
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="~/img/Capella-Hanoi-Premier-Rooms-01.jpg" alt="Phòng Suite sang trọng">
+                        </div>
+                        <div class="room-details">
+                            <h3>Phòng Suite sang trọng</h3>
+                            <p>Kết hợp hoàn hảo giữa thẩm mỹ vượt thời gian và tiện nghi hiện đại với giường cỡ siêu lớn.</p>
+                            <a href="#" class="btn btn-outline">Xem chi tiết</a>
+                        </div>
+                    </div>
+
+                    <!-- Loại phòng 2 -->
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="~/img/Capella-Hanoi-Homepage-Gallery-06.jpg" alt="Phòng Deluxe">
+                        </div>
+                        <div class="room-details">
+                            <h3>Phòng Deluxe</h3>
+                            <p>Tất cả các phòng Premier đều có ban công kiểu Pháp thanh lịch để ngắm nhìn vẻ đẹp của khu phố.</p>
+                            <a href="#" class="btn btn-outline">Xem chi tiết</a>
+                        </div>
+                    </div>
+
+                    <!-- Loại phòng 3 -->
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="~/img/rwgzu-executive-suite-living-room-dusk_WIDE-LARGE-16-9.jpg" alt="Phòng Executive Suite">
+                        </div>
+                        <div class="room-details">
+                            <h3>Phòng Executive Suite</h3>
+                            <p>Nằm ở tầng cao nhất, các suite được thiết kế tinh tế với sân hiên ngoài trời rộng rãi.</p>
+                            <a href="#" class="btn btn-outline">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần Ẩm thực -->
+        <section class="section dining-section">
+            <div class="container">
+                <h2 class="section-title">Ẩm thực</h2>
+                <p class="section-subtitle">Bản hòa tấu hương vị</p>
+
+                <div class="dining-grid">
+                    <div class="dining-description">
+                        <p>Trải nghiệm hương vị, âm thanh và màu sắc làm lay động mọi giác quan. Nhà hàng của chúng tôi nâng tầm hương vị địa phương với phong cách hiện đại, mang đến không gian lý tưởng để thưởng thức rượu vang và ẩm thực.</p>
+                        <a href="#" class="btn">Khám phá thêm</a>
+                    </div>
+
+                    <div class="dining-image dining-image-1">
+                        <img src="~/img/capella-hanoi-advance-purchase.jpg" alt="Nhà hàng">
+                    </div>
+                    <div class="dining-image dining-image-2">
+                        <img src="~/img/Capella-Hanoi-Opera-Suit-Gallery-01.jpg" alt="Quầy bar">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần Trải nghiệm -->
+        <section class="section experiences-section">
+            <div class="container">
+                <h2 class="section-title">Trải nghiệm</h2>
+                <p class="section-subtitle">Tạo nên những kỷ niệm khó quên</p>
+
+                <div class="experience-cards">
+                    <div class="experience-card">
+                        <div class="experience-image">
+                            <img src="~/img/delight-with-our-extensive-spa-treatments.jpg" alt="Spa">
+                        </div>
+                        <div class="experience-content">
+                            <h3>Spa Auriga</h3>
+                            <p>Dựa trên nhịp điệu thiên thể theo chu kỳ mặt trăng, spa đạt giải thưởng của chúng tôi mang đến liệu trình phục hồi cân bằng và hài hòa.</p>
+                            <a href="#" class="text-link">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="experience-image">
+                            <img src="~/img/Pool.jpg" alt="Hồ bơi">
+                        </div>
+                        <div class="experience-content">
+                            <h3>Hồ bơi vô cực</h3>
+                            <p>Hồ bơi trong nhà được thiết kế như một chốn nghỉ dưỡng yên bình với tầm nhìn tuyệt đẹp ra thành phố.</p>
+                            <a href="#" class="text-link">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="experience-image">
+                            <img src="~/img/Ha_Noi.jpg" alt="Tour tham quan">
+                        </div>
+                        <div class="experience-content">
+                            <h3>Tour tham quan địa phương</h3>
+                            <p>Khám phá những góc ẩn giấu của thành phố với các tour du lịch và trải nghiệm văn hóa được chọn lọc kỹ lưỡng.</p>
+                            <a href="#" class="text-link">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thư viện ảnh -->
+        <section class="section gallery-section">
+            <div class="container">
+                <h2 class="section-title">Thư viện ảnh</h2>
+                <p class="section-subtitle">Những khoảnh khắc đáng nhớ</p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="~/img/import_blog_slider-horeca-lobby-hotel-1.jpg" alt="Sảnh khách sạn">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="~/img/istockphoto-1390233984-612x612.jpg" alt="Nội thất phòng">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="~/img/designer-dining-rooms-gillian-segal-tef-q7-a-655e31d978e13.jpg" alt="Khu vực ăn uống">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="~/img/The Peninsula Chicago SpaRelaxation Area guestd.jpg" alt="Khu Spa">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="~/img/623dc362.jpg" alt="Hồ bơi">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="~/img/031925-PerfectPlacement-1Hero.jpg" alt="Toàn cảnh thành phố">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="~/MyJs/Home_Index.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-dymI6F7Tj6z1gFpSB7IjlPVXVkLZJSe+nF1jzXG07z1E+bO1ylXKkWZsxyDdx3XYIJ6QEzjgq3Xy5m+8Q9nZaw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>

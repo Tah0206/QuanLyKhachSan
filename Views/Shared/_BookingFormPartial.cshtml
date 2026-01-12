@@ -1,0 +1,97 @@
+﻿@model DoAnQuanLyKhachSan.Models.Booking
+
+@using (Html.BeginForm("Create", "Bookings", FormMethod.Post, new { @class = "needs-validation", id = "bookingForm", novalidate = "novalidate" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="p-5 bg-white rounded-4 shadow-lg border">
+        <h3 class="mb-4 text-center text-uppercase fw-bold" style="letter-spacing:1px; color:#2c3e50;font-family: Georgia, 'Times New Roman', Times, serif">
+            Đặt phòng
+        </h3>
+
+        <!-- phòng -->
+        <div class="mb-4">
+            <label class="form-label text-uppercase small fw-semibold text-muted">Phòng</label>
+            @Html.DropDownListFor(m => m.RoomId, ViewBag.RoomId as SelectList, "-- Chọn phòng --",
+         new { @class = "form-select form-select-lg border-0 shadow-sm rounded-3", required = "required" })
+            <div class="invalid-feedback">Vui lòng chọn phòng.</div>
+        </div>
+
+        <!-- ngày đặt/ ngày trả -->
+        <div class="row mb-4">
+            <div class="col">
+                <label class="form-label text-uppercase small fw-semibold text-muted">Ngày nhận phòng</label>
+                @Html.TextBoxFor(m => m.CheckInDate, "{0:yyyy-MM-dd}",
+                    new { @class = "form-control form-control-lg border-0 shadow-sm rounded-3", type = "date", min = DateTime.Now.ToString("yyyy-MM-dd"), required = "required", id = "checkIn" })
+                <div class="invalid-feedback">Ngày nhận phòng phải từ hôm nay trở đi.</div>
+            </div>
+            <div class="col">
+                <label class="form-label text-uppercase small fw-semibold text-muted">Ngày trả phòng</label>
+                @Html.TextBoxFor(m => m.CheckOutDate, "{0:yyyy-MM-dd}",
+                    new { @class = "form-control form-control-lg border-0 shadow-sm rounded-3", type = "date", min = DateTime.Now.ToString("yyyy-MM-dd"), required = "required", id = "checkOut" })
+                <div class="invalid-feedback">Ngày trả phải lớn hơn ngày nhận.</div>
+            </div>
+        </div>
+
+        <!-- số người -->
+        <div class="mb-4">
+            <label class="form-label text-uppercase small fw-semibold text-muted">Số người</label>
+            @Html.TextBoxFor(m => m.NumberOfPeople, new { @class = "form-control form-control-lg border-0 shadow-sm rounded-3", type = "number", min = "1", required = "required" })
+            <div class="invalid-feedback">Vui lòng nhập số người (ít nhất 1).</div>
+        </div>
+
+        <!-- ghi chú -->
+        <div class="mb-4">
+            <label class="form-label text-uppercase small fw-semibold text-muted">Ghi chú</label>
+            @Html.TextAreaFor(m => m.Note, new { @class = "form-control form-control-lg border-0 shadow-sm rounded-3", rows = 3, placeholder = "Nhập yêu cầu đặc biệt (nếu có)" })
+        </div>
+
+        <!-- Hidden: auto set cho khách hàng -->
+        @Html.HiddenFor(m => m.BookingStatusID)
+        @Html.HiddenFor(m => m.PaymentStatusID)
+
+        <!-- nút bấm đặt -->
+        <div class="text-center mt-5">
+            <button type="submit" class="btn btn-dark btn-lg px-5 py-3 rounded-3 shadow-sm text-uppercase fw-bold" style="letter-spacing:1px;">
+                Đặt phòng ngay
+            </button>
+        </div>
+    </div>
+}
+
+<style>
+    form select, form input, form textarea {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+        background-color: #f9f9f9;
+        transition: all 0.2s ease-in-out;
+    }
+
+        form select:focus, form input:focus, form textarea:focus {
+            background-color: #fff;
+            border: 1px solid #aaa;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+    form h3 {
+        font-family: 'Playfair Display', serif;
+    }
+</style>
+
+<script>
+    document.getElementById("bookingForm").addEventListener("submit", function (event) {
+        let checkIn = document.getElementById("checkIn").value;
+        let checkOut = document.getElementById("checkOut").value;
+        let today = new Date().toISOString().split('T')[0];
+
+        if (checkIn < today) {
+            alert("Ngày nhận phòng không được ở quá khứ.");
+            event.preventDefault();
+            return;
+        }
+        if (checkOut <= checkIn) {
+            alert("Ngày trả phòng phải lớn hơn ngày nhận phòng.");
+            event.preventDefault();
+            return;
+        }
+    });
+</script>

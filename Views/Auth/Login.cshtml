@@ -1,0 +1,76 @@
+﻿@model DoAnQuanLyKhachSan.Models.ViewModel.LoginViewModel
+
+
+@{
+    ViewBag.Title = "Đăng Nhập";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+
+    <!-- Font & Style -->
+    <link rel="stylesheet" href="~/MyCss/CSS_Auth.css" )" />
+</head>
+<body>
+
+    <div class="background">
+        <div class="home">
+            <div class="login">
+                <h2>Đăng nhập hệ thống</h2>
+
+                @using (Html.BeginForm("Login", "Auth", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="input">
+                        @Html.TextBoxFor(m => m.Username, new
+                        {
+                            @class = "input1",
+                            placeholder = "Tài Khoản",
+                            required = "required"
+                        })
+                        <i class="fas fa-user"></i>
+                        @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="input">
+                        @Html.PasswordFor(m => m.Password, new
+                        {
+                            @class = "input1",
+                            placeholder = "Mật khẩu",
+                            required = "required"
+                        })
+                        <i class="fas fa-lock"></i>
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="check">
+                        <div>
+                            <label>
+                                @Html.CheckBox("RememberMe") Nhớ đăng nhập
+                            </label>
+                        </div>
+                        @Html.ActionLink("Quên mật khẩu?", "ForgotPassword", "Auth", null, new { @class = "nav-link" })
+                    </div>
+
+                    <div class="button">
+                        <button type="submit">Đăng nhập</button>
+                    </div>
+
+                    <div class="sign-up">
+                        <p>Bạn chưa có tài khoản? @Html.ActionLink("Đăng ký", "Register", "Auth")</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

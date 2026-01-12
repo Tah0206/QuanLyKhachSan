@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mt-4 mb-4 text-center">Chào mừng đến với hệ thống quản lý khách sạn</h2>
+
+<!-- 4 Card Thống kê -->
+<div class="row text-center">
+    <div class="col-md-3">
+        <div class="card bg-primary text-white shadow p-3 rounded-3">
+            <h5><i class="fas fa-hotel"></i> Tổng số phòng</h5>
+            <p class="fs-3 fw-bold">@ViewBag.TongPhong</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-success text-white shadow p-3 rounded-3">
+            <h5><i class="fas fa-door-open"></i> Phòng còn trống</h5>
+            <p class="fs-3 fw-bold">@ViewBag.PhongTrong</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-warning text-dark shadow p-3 rounded-3">
+            <h5><i class="fas fa-user-friends"></i> Khách đang thuê</h5>
+            <p class="fs-3 fw-bold">@ViewBag.KhachDangThue</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-danger text-white shadow p-3 rounded-3">
+            <h5><i class="fas fa-dollar-sign"></i> Doanh thu hôm nay</h5>
+            <p class="fs-3 fw-bold">@String.Format("{0:N0} VNĐ", ViewBag.DoanhThuHomNay)</p>
+        </div>
+    </div>
+</div>
+
+<!-- Biểu đồ -->
+<div class="row mt-5">
+    <div class="col-md-4 offset-md-4">
+        <div class="card shadow p-3 text-center">
+            <h6>Doanh thu hôm nay</h6>
+            <div style="width:150px; text-align:left;">
+                <canvas id="revenueChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('revenueChart').getContext('2d');
+    var revenueChart = new Chart(ctx, {
+        type: 'bar', // có thể đổi thành 'doughnut' nếu muốn
+        data: {
+            labels: ['Doanh thu'],
+            datasets: [{
+                label: 'VNĐ',
+                data: [@ViewBag.DoanhThuHomNay],
+                backgroundColor: '#36A2EB',
+                borderRadius: 5
+            }]
+        },
+        options: {
+            responsive: false, // rất quan trọng để không auto giãn
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+</script>
+
+<!-- FontAwesome Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

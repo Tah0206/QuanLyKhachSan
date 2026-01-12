@@ -1,0 +1,72 @@
+﻿@model DoAnQuanLyKhachSan.Models.Room
+@{
+    ViewBag.Title = "Thêm Phòng Mới";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/MyCss/CSS_All_Create.css" rel="stylesheet" />
+
+<div class="user-create-container">
+    <div class="form-card">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <div class="form-header">
+                    <h4>@ViewBag.Title</h4>
+                </div>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RoomNumber, "Số phòng", htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.RoomNumber, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập số phòng" } })
+                    @Html.ValidationMessageFor(model => model.RoomNumber, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FloorId, "Tầng", htmlAttributes: new { @class = "control-label" })
+                    @Html.DropDownList("FloorId", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.FloorId, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RoomType, "Loại phòng", htmlAttributes: new { @class = "control-label" })
+                    @Html.DropDownListFor(model => model.RoomType,
+                                  new SelectList(new List<Object>{
+                            new { Value = "Standard", Text = "Phòng Tiêu Chuẩn" },
+                            new { Value = "Deluxe", Text = "Phòng Deluxe" },
+                            new { Value = "Suite", Text = "Phòng Suite" },
+                            new { Value = "VIP", Text = "Phòng VIP" }
+                          }, "Value", "Text"),
+                                  "Chọn loại phòng",
+                                  new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.RoomType, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Price, "Giá phòng", htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập giá phòng", type = "number" } })
+                    @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RoomStatusId, "Trạng thái", htmlAttributes: new { @class = "control-label" })
+                    @Html.DropDownList("RoomStatusId", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.RoomStatusId, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-save"></i> Thêm phòng
+                    </button>
+                </div>
+            </div>
+        }
+
+        <a href="@Url.Action("Index")" class="btn-back">
+            <i class="fas fa-arrow-left"></i> Quay lại danh sách
+        </a>
+    </div>
+</div>

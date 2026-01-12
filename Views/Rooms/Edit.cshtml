@@ -1,0 +1,76 @@
+﻿@model DoAnQuanLyKhachSan.Models.Room
+
+@{
+    ViewBag.Title = "Chỉnh sửa Phòng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/MyCss/CSS_All_Edit.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<div class="delete-container">
+    <div class="delete-card">
+        <div class="delete-header">
+            <h3>@ViewBag.Title</h3>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="delete-details">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.RoomId)
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.RoomNumber)</span>
+                    <div class="detail-value">
+                        @Html.EditorFor(model => model.RoomNumber, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RoomNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.FloorId)</span>
+                    <div class="detail-value">
+                        @Html.DropDownList("FloorId", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.FloorId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.RoomType)</span>
+                    <div class="detail-value">
+                        @Html.EditorFor(model => model.RoomType, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RoomType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.Price)</span>
+                    <div class="detail-value">
+                        @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.RoomStatusId)</span>
+                    <div class="detail-value">
+                        @Html.DropDownList("RoomStatusId", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.RoomStatusId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="delete-actions">
+                    <button type="submit" class="btn-delete" style="background-color: var(--primary-color)">
+                        <i class="fas fa-save"></i> Lưu thay đổi
+                    </button>
+                    <a href="@Url.Action("Index")" class="btn-cancel">
+                        <i class="fas fa-arrow-left"></i> Quay lại
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

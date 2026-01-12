@@ -1,0 +1,76 @@
+﻿@model DoAnQuanLyKhachSan.Models.User
+
+@{
+    ViewBag.Title = "Chỉnh sửa Người dùng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/MyCss/CSS_All_Edit.css" />
+
+<div class="delete-container">
+    <div class="delete-card">
+        <div class="delete-header">
+            <h3>@ViewBag.Title</h3>
+            <p class="delete-confirm">Vui lòng cập nhật thông tin người dùng</p>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="delete-details">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.UserId)
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.Username)</span>
+                    <div class="detail-value">
+                        @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.PasswordHash)</span>
+                    <div class="detail-value">
+                        @Html.EditorFor(model => model.PasswordHash, new { htmlAttributes = new { @class = "form-control", type = "password" } })
+                        @Html.ValidationMessageFor(model => model.PasswordHash, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.FullName)</span>
+                    <div class="detail-value">
+                        @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.Email)</span>
+                    <div class="detail-value">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", type = "email" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">@Html.DisplayNameFor(model => model.RoleId)</span>
+                    <div class="detail-value">
+                        @Html.DropDownList("RoleId", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.RoleId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="delete-actions">
+                    <button type="submit" class="btn-delete" style="background-color: var(--primary-color)">
+                        <i class="fas fa-save"></i> Lưu thay đổi
+                    </button>
+                    <a href="@Url.Action("Index")" class="btn-cancel">
+                        <i class="fas fa-arrow-left"></i> Quay lại
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

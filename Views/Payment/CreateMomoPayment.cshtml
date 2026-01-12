@@ -1,0 +1,36 @@
+﻿@model DoAnQuanLyKhachSan.Models.MoMo.MomoCreatePaymentResponseModel
+@{
+    ViewBag.Title = "Thanh toán qua MoMo";
+}
+<div class="container mt-5 text-center">
+    <h2>Thanh toán qua MoMo</h2>
+    <p class="mt-3">Quét mã hoặc bấm nút bên dưới để mở MoMo.</p>
+
+    @if (!string.IsNullOrEmpty(Model.QrCodeUrl))
+    {
+        <img src="@Model.QrCodeUrl" alt="QR MoMo" class="img-fluid" style="max-width:300px;" />
+    }
+
+    <div class="mt-4">
+        @if (!string.IsNullOrEmpty(Model.PayUrl))
+        {
+            <a href="@Model.PayUrl" class="btn btn-primary btn-lg" target="_blank">Thanh toán trên MoMo</a>
+        }
+        else
+        {
+            <p class="text-danger">
+                @(!string.IsNullOrEmpty(Model.Message) ? Model.Message : "Không thể tạo liên kết thanh toán.")
+            </p>
+        }
+    </div>
+
+    @* Debug hiển thị toàn bộ dữ liệu trả về *@
+    @if (System.Diagnostics.Debugger.IsAttached)
+    {
+        <pre>@Newtonsoft.Json.JsonConvert.SerializeObject(Model, Newtonsoft.Json.Formatting.Indented)</pre>
+    }
+
+    <div class="mt-3">
+        <a href="@Url.Action("Pay", "Payment", new { bookingId = ViewBag.BookingId })" class="btn btn-secondary">Quay lại</a>
+    </div>
+</div>

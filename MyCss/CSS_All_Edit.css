@@ -1,0 +1,205 @@
+﻿:root {
+    --bg-color: #f9fafb;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --text-color: #111827;
+    --light-text: #6b7280;
+    --primary-color: #3b82f6;
+    --secondary-color: #06b6d4;
+    --accent-color: #dc2626;
+    --border-radius: 12px;
+    --border-radius-sm: 6px;
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.06);
+    --transition: all 0.3s ease-in-out;
+}
+
+/* Base Container Styles */
+.delete-container,
+.edit-container {
+    margin-left: 95px;
+    padding: 2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+/* Card Styles */
+.delete-card,
+.edit-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.delete-header,
+.edit-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+    .delete-header h3,
+    .edit-header h3 {
+        color: var(--text-color);
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        position: relative;
+        padding-left: 1rem;
+    }
+
+        .delete-header h3::before,
+        .edit-header h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            border-radius: 4px;
+        }
+
+.delete-confirm,
+.edit-subtitle {
+    color: var(--light-text);
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Form Content Styles */
+.delete-details,
+.edit-form {
+    margin-bottom: 2rem;
+}
+
+.detail-row,
+.form-group {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.detail-label,
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.detail-value,
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+/* Common Elements */
+.text-danger {
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.delete-actions,
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-delete,
+.btn-save {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+    .btn-delete:hover,
+    .btn-save:hover {
+        background-color: #2563eb;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+.btn-cancel {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--light-text);
+    color: white;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+    .btn-cancel:hover {
+        background-color: #4b5563;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+/* Special Cases */
+.btn-delete {
+    background-color: var(--accent-color);
+}
+
+    .btn-delete:hover {
+        background-color: #b91c1c;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .delete-container,
+    .edit-container {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+
+    .delete-card,
+    .edit-card {
+        padding: 1.5rem;
+    }
+
+    .delete-actions,
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-delete,
+    .btn-save,
+    .btn-cancel {
+        width: 100%;
+        justify-content: center;
+    }
+}

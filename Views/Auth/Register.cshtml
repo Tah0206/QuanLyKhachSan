@@ -1,0 +1,115 @@
+﻿@model DoAnQuanLyKhachSan.Models.ViewModel.RegisterViewModel
+@{
+    ViewBag.Title = "Đăng ký tài khoản";
+}
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/MyCss/CSS_Auth.css" />
+</head>
+<body>
+    <header class="header"></header>
+    <div class="background"></div>
+
+    <section class="home">
+        <div class="content">
+            <a href="#" class="logo">FOR GUYS</a>
+            <h2>Chào Mừng Bạn!</h2>
+            <h3>Đến với khách sạn của chúng tôi</h3>
+            <pre>Khách sạn phong cách địa trung hải đầy lãng mạn và sang trọng</pre>
+        </div>
+
+        <div class="login">
+            <h2>Đăng Ký</h2>
+
+            @* Thông báo thành công hoặc lỗi *@
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success">@TempData["Success"]</div>
+            }
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger">@TempData["Error"]</div>
+            }
+
+            @using (Html.BeginForm("Register", "Auth", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="input">
+                    @Html.TextBoxFor(m => m.Username, new
+                    {
+                        @class = "input1",
+                        placeholder = "Tên đăng nhập",
+                        required = "required"
+                    })
+                    <i class="fa-solid fa-user"></i>
+                    @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="input">
+                    @Html.PasswordFor(m => m.Password, new
+                    {
+                        @class = "input1",
+                        placeholder = "Mật khẩu",
+                        required = "required"
+                    })
+                    <i class="fa-solid fa-lock"></i>
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="input">
+                    @Html.PasswordFor(m => m.ConfirmPassword, new
+                    {
+                        @class = "input1",
+                        placeholder = "Xác nhận mật khẩu",
+                        required = "required"
+                    })
+                    <i class="fa-solid fa-lock"></i>
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="input">
+                    @Html.TextBoxFor(m => m.FullName, new
+                    {
+                        @class = "input1",
+                        placeholder = "Họ tên",
+                        required = "required"
+                    })
+                    <i class="fa-solid fa-id-card"></i>
+                    @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="input">
+                    @Html.TextBoxFor(m => m.Email, new
+                    {
+                        @class = "input1",
+                        placeholder = "Email",
+                        type = "email",
+                        required = "required"
+                    })
+                    <i class="fa-solid fa-envelope"></i>
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="button">
+                    <button type="submit" class="btn">Đăng Ký</button>
+                </div>
+
+                <div class="sign-up">
+                    <p>Bạn đã có tài khoản? @Html.ActionLink("Đăng Nhập", "Login", "Auth")</p>
+                </div>
+            }
+        </div>
+    </section>
+</body>
+</html>

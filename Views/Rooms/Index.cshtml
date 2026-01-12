@@ -1,0 +1,54 @@
+﻿
+@model IEnumerable<DoAnQuanLyKhachSan.Models.Room>
+
+@{
+    ViewBag.Title = "Quản Lý Phòng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/MyCss/CSS_Rooms_Index.css" />
+<div class="background">
+    <h2>@ViewBag.Title</h2>
+
+    <a href="@Url.Action("Create")" class="create-new-btn">Thêm Phòng</a>
+
+    <div class="room-grid">
+        @foreach (var item in Model)
+        {
+            string status = item.RoomStatu?.StatusName?.ToLower() ?? "";
+            string boxClass = "room-box ";
+            string statusClass = "room-status ";
+
+            if (status == "trống")
+            {
+                boxClass += "empty";
+                statusClass += "empty";
+            }
+            else if (status == "đã đặt")
+            {
+                boxClass += "reserved";
+                statusClass += "booked";
+            }
+            else if (status == "đang sử dụng")
+            {
+                boxClass += "occupied";
+                statusClass += "inuse";
+            }
+
+            <div class="@boxClass" onclick="toggleRoomDetails(this)">
+                <div class="room-number">@item.RoomNumber</div>
+                <div class="room-type">@item.RoomType</div>
+                <div class="room-price">$@item.Price</div>
+                <div class="room-floor">Floor: @item.Floor.FloorName</div>
+                <div class="@statusClass">@item.RoomStatu.StatusName</div>
+
+                <div class="action-buttons">
+                    <a href="@Url.Action("Edit", new { id=item.RoomId })" class="action-btn edit-btn">Sửa</a>
+                    <a href="@Url.Action("Delete", new { id=item.RoomId })" class="action-btn delete-btn">Xóa</a>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+<script src="~/MyJs/Rooms_Index.js"></script>

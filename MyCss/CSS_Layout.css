@@ -1,0 +1,13 @@
+﻿/* Responsive */
+@media (max-width: 768px) {
+    .footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-links h4::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

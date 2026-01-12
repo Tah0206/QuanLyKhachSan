@@ -1,0 +1,12 @@
+﻿@model DoAnQuanLyKhachSan.Models.Booking
+@{
+    ViewBag.Title = "Đặt phòng thành công";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";  
+}
+<div class="container mt-4">
+    <h2>@ViewBag.Title</h2>
+    <p>Cảm ơn bạn đã đặt phòng!</p>
+    <p>Số tiền cần thanh toán: <strong>@String.Format("{0:N0} VNĐ", ViewBag.TotalAmount)</strong></p>
+
+    <a href="@Url.Action("Pay", "Payment", new { bookingId = Model.BookingId })" class="btn btn-primary btn-lg mt-3">Thanh toán ngay</a>
+</div>
